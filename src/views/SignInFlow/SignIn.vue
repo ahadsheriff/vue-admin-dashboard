@@ -10,13 +10,22 @@
             <input type="password" placeholder="Password">
             <button>Sign In</button>
             <router-link to="/recover">Forgot your password?</router-link>
+            <button @click="toggleDarkMode">Toggle</button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "SignIn"
+        name: "SignIn",
+        data: {
+            isDarkMode: true
+        },
+        methods: {
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+            }
+        }
     }
 </script>
 
