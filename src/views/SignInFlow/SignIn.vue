@@ -3,16 +3,19 @@
         class="container"
         :class="{'light-background' : !isDarkMode, 'dark-background' : isDarkMode}"
     >
-        <div
-            class="request"
-            :class="{'light-request' : isDarkMode, 'dark-request' : !isDarkMode}"
-        >Don't have a Design+Code HQ account?
+        <transition name="slide-in-right" enter-active-class="animated slideInRight">
+            <div
+                v-show="show"
+                class="request"
+                :class="{'light-request' : isDarkMode, 'dark-request' : !isDarkMode}"
+            > Don't have an HQ account? 
             <router-link to="/request">Request an account</router-link>
-        </div>
+            </div>
+        </transition>
         <div class="login">
             <img src="@/assets/DCHQ.svg" v-show="isDarkMode">
             <img src="@/assets/DCHQ-dark.svg" v-show="!isDarkMode">
-            <h4 :class="{'light-text' : isDarkMode, 'dark-text' : !isDarkMode}">Sign into Design+Code HQ</h4>
+            <h4 :class="{'light-text' : isDarkMode, 'dark-text' : !isDarkMode}">Sign into HQ</h4>
             <input
                 type="email"
                 placeholder="Email"
@@ -36,6 +39,14 @@
 <script>
     export default {
         name: "SignIn",
+        data() {
+            return {
+                show: false
+            };
+        },
+        mounted() {
+            this.show = true;
+        },
         computed: {
             isDarkMode() {
                 return this.$store.getters.isDarkMode;
