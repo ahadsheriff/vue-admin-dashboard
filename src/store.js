@@ -8,19 +8,18 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
   window.localStorage.setItem("isDarkMode", "true");
 }
 
-const userSelectedDarkMode =
-  window.localStorage.getItem("isDarkMode") === "true";
+const userSelectedDarkMode = window.localStorage.getItem("isDarkMode") === "true";
 
 const state = {
   isDarkMode: userSelectedDarkMode
-};
+}
 
 // Getters
 const getters = {
   isDarkMode(state) {
-    return state.isDarkMode;
+    return state.isDarkMode
   }
-};
+}
 
 // Mutations
 const mutations = {
@@ -35,13 +34,14 @@ const mutations = {
       window.localStorage.setItem("isDarkMode", "true");
     }
   }
-};
+}
 
+// Actions
 const actions = {
   triggerDarkMode(context) {
-    context.commit("toggleDarkMode");
+    context.commit('toggleDarkMode');
   }
-};
+}
 
 export default new Vuex.Store({
   state,
