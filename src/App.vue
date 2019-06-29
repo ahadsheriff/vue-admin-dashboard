@@ -22,6 +22,9 @@ export default {
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/typography.scss";
 
+* {
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 body {
   background: $dark-blue;
 }
