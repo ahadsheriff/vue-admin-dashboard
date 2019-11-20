@@ -5,8 +5,6 @@ import store from "./store";
 import * as netlifyIdentityWidget from "netlify-identity-widget";
 import GoTrue from "gotrue-js";
 import VueFirestore from "vue-firestore";
-import "vue-github-buttons/dist/vue-github-buttons.css"; // Stylesheet
-import VueGitHubButtons from "vue-github-buttons"; // Component plugin
 
 Vue.config.productionTip = false;
 
@@ -21,9 +19,6 @@ export const auth = new GoTrue({
 
 // Initialize Vue Firestore
 Vue.use(VueFirestore);
-
-// Initialize Github Buttons
-Vue.use(VueGitHubButtons);
 
 new Vue({
   router,

@@ -59,7 +59,7 @@ yarn serve
 
 ## 🎓 Learning Vue.js
 
-The Design+Code Vue.js course lives [here](https://designcode.io/vue). Start learning by creating this Web App!
+The HQ Vue.js course lives [here](https://designcode.io/vue). Start learning by creating this Web App!
 
 Looking for more guidance? Full documentation for Vue is [on their website](https://vuejs.org/). To see the documentation for the Vue CLL, which was used to create and configure this project, go [here](https://cli.vuejs.org/guide/).
 
